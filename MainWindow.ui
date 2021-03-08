@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>FaceRecognitionSystem</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
@@ -26,8 +26,179 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="page"/>
-    <widget class="QWidget" name="page_2"/>
+    <widget class="QWidget" name="page">
+     <widget class="QPushButton" name="btn_Start">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>400</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始采集</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Stop">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>400</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>停止采集</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_Title">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>90</y>
+        <width>401</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="showarea">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>50</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>摄像头画面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>80</y>
+        <width>381</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>正在训练中</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QPushButton" name="btn_Submit">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>400</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>加密</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_Encryption">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>270</y>
+        <width>461</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QPushButton" name="btn_work">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>400</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>解密</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_Decryption">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>290</y>
+        <width>511</width>
+        <height>71</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_5">
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>261</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>311</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Solve">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>440</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始识别</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>350</y>
+        <width>591</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
@@ -222,6 +393,86 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_Start</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_Start_onClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>505</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>539</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_Stop</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_Stop_onClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>504</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>771</x>
+     <y>527</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_Submit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_Submit_onClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>461</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>778</x>
+     <y>567</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_work</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_Work_onClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>424</x>
+     <y>499</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>775</x>
+     <y>552</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_Solve</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_Solve_onClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>427</x>
+     <y>537</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>789</x>
+     <y>540</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>btn_FaceCollection_onClicked()</slot>
@@ -229,5 +480,10 @@
   <slot>btn_Encrypt_onClicked()</slot>
   <slot>btn_Decrypt_onClicked()</slot>
   <slot>btn_Detect_onClicked()</slot>
+  <slot>btn_Start_onClicked()</slot>
+  <slot>btn_Stop_onClicked()</slot>
+  <slot>btn_Submit_onClicked()</slot>
+  <slot>btn_Work_onClicked()</slot>
+  <slot>btn_Solve_onClicked()</slot>
  </slots>
 </ui>

@@ -1,4 +1,7 @@
 import sys
+import cv2
+import os
+
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
 from MainWindow import Ui_MainWindow
@@ -28,6 +31,23 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
     def btn_Detect_onClicked(self):
         self.stackedWidget.setCurrentIndex(4)
         pass
+
+    def btn_Start_onClicked(self):
+        pass
+
+    def btn_Stop_onClicked(self):
+        pass
+
+    def btn_Submit_onClicked(self):
+        pass
+
+    def btn_Work_onClicked(self):
+        pass
+
+    def btn_Solve_onClicked(self):
+        pass
+
+
 
 
 if __name__=='__main__':
